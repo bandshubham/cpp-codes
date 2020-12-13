@@ -65,13 +65,21 @@ class employee : public person
 int main()
 {
 
-	person p("shubham",20);            //their are 3types of object slicing here we
-	p.display();                       //copy the one slice of object e to object p
+	//person p("shubham",20);            //their are 3types of object slicing here we
+	//p.display();                       //copy the one slice of object e to object p
 	employee e("nikhil",21,94,400.0f); // so we got an output of nikhil,21 for p.display() here this is prove that at the object of e upper box contain an 
 	                                   //adreess of whole parent p 
 	e.display();
-	p=e;
-	p.display();
+
+
+    //p=e;
+	/*person *p=&e;   ///using the pointer 
+	p->display();
+	*/
+	/*
+	person &p1=e;   //using the refernce
+	p1.display();
+	*/
 	getch();
 	return 0;
 }
